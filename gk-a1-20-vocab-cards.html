@@ -109,7 +109,45 @@
   .hist-table th { background: #4a6cf7; color: #fff; padding: 9px 6px; }
   .hist-table td { padding: 7px 6px; border-bottom: 1px solid #eef2ff; text-align: center; }
   .hist-table tr:nth-child(even) td { background: #f8faff; }
-  @media (max-width: 480px) { .word { font-size: 1.6rem; } .emoji { font-size: 2.6rem; } .ch, .ch input { width: 28px; height: 38px; font-size: 1.15rem; } }
+  @media (max-width: 480px) {
+    /* 標題區 */
+    header { padding: 14px 10px; }
+    header h1 { font-size: 1.15rem; }
+    header p { font-size: .72rem; }
+    /* 分頁按鈕 */
+    .tabs { gap: 6px; margin: 12px auto 6px; }
+    .tabs button { padding: 9px 14px; font-size: .88rem; }
+    /* 單字卡本體 */
+    .word { font-size: 1.7rem; }
+    .emoji { font-size: 2.6rem; }
+    .card-wrap { height: 240px; }
+    .hint { font-size: .85rem; color: #999; }
+    /* 設定選單（間隔/語速）：縮小防截斷 */
+    .nav select {
+      max-width: 118px !important; padding: 7px 6px !important; font-size: .78rem !important;
+      border-radius: 10px !important;
+    }
+    .nav { gap: 8px; }
+    .nav button { padding: 10px 16px; font-size: .92rem; }
+    /* 上下一個按鈕列 */
+    .card-wrap + .nav { margin-top: 12px; }
+    .card-wrap + .nav button { flex: 1 1 0; min-width: 0; white-space: nowrap; }
+    /* 左右浮動箭頭：縮小往下移，避開卡片與按鈕 */
+    .arrow { width: 42px; height: 42px; font-size: 1.15rem; top: auto; bottom: 120px; transform: none; opacity: .92; }
+    .arrow:hover { transform: none; }
+    .arrow.left { left: 6px; }
+    .arrow.right { right: 6px; }
+    /* 字母篩選 */
+    .filter-row { gap: 4px; margin-top: 10px; }
+    .filter-row button { padding: 5px 8px; font-size: .8rem; }
+    /* 測驗 */
+    .quiz-box { padding: 20px 12px; }
+    .ch, .ch input { width: 28px; height: 38px; font-size: 1.15rem; }
+    .quiz-actions button { padding: 10px 14px; font-size: .9rem; }
+    /* 學習歷程表格 */
+    .hist-table { font-size: .78rem; }
+    .stat-card { padding: 10px 14px; min-width: 90px; }
+  }
 </style>
 </head>
 <body>
